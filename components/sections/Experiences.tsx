@@ -1,246 +1,12 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { experienceCategories } from "@/constants";
 
-// Experience with details
-interface ExperienceDetail {
-  responsibility: string;
-  description: string;
-}
 
-interface Experience {
-  title: string;
-  company: string;
-  period: string;
-  location: string;
-  details: ExperienceDetail[];
-}
-
-interface ExperienceCategory {
-  category: string;
-  icon: string;
-  experiences: Experience[];
-}
 
 export default function Experiences() {
   const [activeTab, setActiveTab] = useState(0);
-
-  const experienceCategories: ExperienceCategory[] = [
-    {
-      category: "Professional",
-      icon: "💼",
-      experiences: [
-        {
-          title: "Senior Frontend Developer",
-          company: "TechVision Inc.",
-          period: "2022 - Present",
-          location: "San Francisco, CA",
-          details: [
-            {
-              responsibility: "Application Development",
-              description:
-                "Led development of immersive 3D product visualization tools using Three.js and React.",
-            },
-            {
-              responsibility: "Team Leadership",
-              description:
-                "Managed a team of 5 developers implementing Agile methodologies to streamline project delivery.",
-            },
-            {
-              responsibility: "Performance Optimization",
-              description:
-                "Reduced application load time by 45% through code splitting and lazy loading techniques.",
-            },
-            {
-              responsibility: "Architecture Design",
-              description:
-                "Designed and implemented a scalable component library used across multiple projects.",
-            },
-          ],
-        },
-        {
-          title: "Frontend Developer",
-          company: "Digital Innovations",
-          period: "2020 - 2022",
-          location: "Austin, TX",
-          details: [
-            {
-              responsibility: "UI Implementation",
-              description:
-                "Built responsive interfaces for client applications using React and Next.js.",
-            },
-            {
-              responsibility: "Animation Development",
-              description:
-                "Created complex UI animations and transitions using Framer Motion and CSS.",
-            },
-            {
-              responsibility: "Cross-browser Compatibility",
-              description:
-                "Ensured consistent experience across all major browsers and device types.",
-            },
-          ],
-        },
-        {
-          title: "Junior Web Developer",
-          company: "CreativeWeb Solutions",
-          period: "2019 - 2020",
-          location: "Remote",
-          details: [
-            {
-              responsibility: "Frontend Development",
-              description:
-                "Developed and maintained client websites using HTML, CSS, and JavaScript.",
-            },
-            {
-              responsibility: "CMS Integration",
-              description:
-                "Implemented content management systems for client websites.",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      category: "Freelance",
-      icon: "🚀",
-      experiences: [
-        {
-          title: "Full Stack Developer",
-          company: "Self-employed",
-          period: "2021 - Present",
-          location: "Remote",
-          details: [
-            {
-              responsibility: "E-commerce Development",
-              description:
-                "Built custom e-commerce solutions using Next.js, Stripe, and Shopify API.",
-            },
-            {
-              responsibility: "3D Web Experiences",
-              description:
-                "Created immersive 3D web experiences for product showcases using Three.js.",
-            },
-            {
-              responsibility: "Performance Optimization",
-              description:
-                "Optimized web applications for performance and SEO, improving client conversion rates.",
-            },
-          ],
-        },
-        {
-          title: "UI/UX Designer",
-          company: "Various Clients",
-          period: "2020 - 2021",
-          location: "Remote",
-          details: [
-            {
-              responsibility: "User Interface Design",
-              description:
-                "Designed intuitive user interfaces for web and mobile applications using Figma.",
-            },
-            {
-              responsibility: "User Research",
-              description:
-                "Conducted user research and testing to inform design decisions.",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      category: "Education",
-      icon: "🎓",
-      experiences: [
-        {
-          title: "Computer Science",
-          company: "Tech University",
-          period: "2016 - 2020",
-          location: "Boston, MA",
-          details: [
-            {
-              responsibility: "Bachelor's Degree",
-              description:
-                "Graduated with honors, specializing in web technologies and interactive media.",
-            },
-            {
-              responsibility: "Key Projects",
-              description:
-                "Developed a virtual campus tour using WebGL and Three.js as capstone project.",
-            },
-            {
-              responsibility: "Relevant Coursework",
-              description:
-                "Advanced JavaScript, Data Structures & Algorithms, UI/UX Design, Computer Graphics.",
-            },
-          ],
-        },
-        {
-          title: "Web Development Bootcamp",
-          company: "Code Academy",
-          period: "2019",
-          location: "Online",
-          details: [
-            {
-              responsibility: "Technical Training",
-              description:
-                "Intensive 12-week program focused on modern frontend and backend technologies.",
-            },
-            {
-              responsibility: "Final Project",
-              description:
-                "Built a full-stack social media application using React, Node.js, and MongoDB.",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      category: "Certifications",
-      icon: "🏆",
-      experiences: [
-        {
-          title: "AWS Certified Developer",
-          company: "Amazon Web Services",
-          period: "2023",
-          location: "Online",
-          details: [
-            {
-              responsibility: "Cloud Expertise",
-              description:
-                "Demonstrated proficiency in developing, deploying, and debugging cloud-based applications using AWS.",
-            },
-          ],
-        },
-        {
-          title: "Meta Frontend Developer",
-          company: "Meta",
-          period: "2022",
-          location: "Online",
-          details: [
-            {
-              responsibility: "Frontend Specialization",
-              description:
-                "Mastered advanced React concepts including state management, hooks, and performance optimization.",
-            },
-          ],
-        },
-        {
-          title: "Google UX Design",
-          company: "Google",
-          period: "2021",
-          location: "Online",
-          details: [
-            {
-              responsibility: "Design Principles",
-              description:
-                "Learned comprehensive UX design process including research, wireframing, prototyping, and testing.",
-            },
-          ],
-        },
-      ],
-    },
-  ];
 
   const container = {
     hidden: { opacity: 0 },
@@ -274,7 +40,6 @@ export default function Experiences() {
         </p>
       </motion.div>
 
-      {/* Tab Navigation */}
       <div className="max-w-4xl mx-auto mb-12">
         <div className="flex overflow-x-auto py-2 space-x-2 justify-center">
           {experienceCategories.map((category, index) => (
@@ -297,7 +62,6 @@ export default function Experiences() {
         </div>
       </div>
 
-      {/* Experience Display */}
       <div className="max-w-4xl mx-auto">
         <motion.div
           variants={container}
@@ -347,7 +111,6 @@ export default function Experiences() {
         </motion.div>
       </div>
 
-      {/* Achievements Section */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

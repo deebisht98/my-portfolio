@@ -14,3 +14,32 @@ export type SkillCategory = {
   icon: string;
   skills: Skill[];
 };
+
+export type ExperienceDetail = {
+  responsibility: string;
+  description: string;
+};
+
+export type Experience = {
+  title: string;
+  company: string;
+  period: string;
+  location: string;
+  details: ExperienceDetail[];
+};
+
+export type ExperienceCategory = {
+  category: string;
+  icon: string;
+  experiences: Experience[];
+};
+
+export type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  githubUrl: string;
+  liveUrl: string;
+};

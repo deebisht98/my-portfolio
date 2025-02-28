@@ -14,49 +14,10 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink } from "lucide-react";
+import { Project } from "@/types";
+import { projects } from "@/constants";
 
-type Project = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  githubUrl: string;
-  liveUrl: string;
-};
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce platform with cart functionality, user authentication, and payment processing.",
-    image: "/images/project1.jpg",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "https://github.com/yourusername/project1",
-    liveUrl: "https://project1.yourdomain.com",
-  },
-  {
-    id: 2,
-    title: "AI Image Generator",
-    description:
-      "Web application that generates images using AI based on text prompts from users.",
-    image: "/images/project2.jpg",
-    tags: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/project2",
-    liveUrl: "https://project2.yourdomain.com",
-  },
-  {
-    id: 3,
-    title: "Real-time Chat Application",
-    description:
-      "A real-time messaging application with features like read receipts, typing indicators, and file sharing.",
-    image: "/images/project3.jpg",
-    tags: ["Socket.io", "Express", "React", "Firebase"],
-    githubUrl: "https://github.com/yourusername/project3",
-    liveUrl: "https://project3.yourdomain.com",
-  },
-];
 
 function ProjectCard({ project }: { project: Project }) {
   const cardRef = useRef<HTMLDivElement>(null);
