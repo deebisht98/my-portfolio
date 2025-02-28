@@ -1,5 +1,7 @@
 import { SkillCategory, socialLink } from "@/types";
 
+export const userEmail = "deebisht98.dev@gmail.com";
+
 export const socialLinks: socialLink[] = [
   { name: "GitHub", icon: "github", url: "https://github.com/deebisht98" },
   {

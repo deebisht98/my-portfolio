@@ -34,7 +34,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="mt-24 flex flex-col justify-center">
+    <section className="mt-32 flex flex-col justify-center">
       <div className="backdrop-blur-lg bg-white/5 rounded-2xl p-8 md:p-12 shadow-xl ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function Hero() {
             ref={titleRef}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
           >
-           {" Dheeraj  Bisht"}
+            {" Dheeraj  Bisht"}
           </h1>
 
           <motion.h2

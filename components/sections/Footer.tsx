@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import SociaLinks from "../custom/SocialLinks";
+import { userEmail } from "@/constants";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -87,9 +88,10 @@ export default function Footer() {
               </p>
               <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-px rounded-lg">
                 <div className="bg-gray-800 rounded-lg p-4">
-                  <p className="text-gray-300 mb-2">
-                    <span className="text-white font-medium">Email:</span>{" "}
-                    deebisht98.dev@gmail.com
+                  <p className="text-gray-300 mb-2 w-full">
+                    <span className="text-white font-medium break-words">
+                      Email: {userEmail}
+                    </span>
                   </p>
                   <p className="text-gray-300">
                     <span className="text-white font-medium">Location:</span>{" "}

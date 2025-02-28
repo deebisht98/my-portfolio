@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 interface NavItem {
   name: string;
@@ -18,7 +19,18 @@ interface NavBarProps {
 }
 
 export function TubelightNavbar({ items, className }: NavBarProps) {
-  const [activeTab, setActiveTab] = useState(items[0].name);
+  const pathName = usePathname();
+  const [activeTab, setActiveTab] = useState("");
+
+  React.useEffect(() => {
+    if (pathName) {
+      if (pathName.substring(1) === "") {
+        setActiveTab("home");
+      } else {
+        setActiveTab(pathName.substring(1));
+      }
+    }
+  }, [pathName]);
 
   return (
     <div
@@ -30,13 +42,13 @@ export function TubelightNavbar({ items, className }: NavBarProps) {
       <div className="flex items-center gap-3 bg-background/5 border border-muted/20 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
         {items.map((item) => {
           const Icon = item.icon;
-          const isActive = activeTab === item.name;
+          const isActive = activeTab === item.name.toLowerCase();
 
           return (
             <Link
               key={item.name}
               href={item.url}
-              onClick={() => setActiveTab(item.name)}
+              onClick={() => setActiveTab(item.name.toLowerCase())}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-secondary/90 hover:text-secondary",

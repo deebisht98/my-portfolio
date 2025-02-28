@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll("section:not(#projects)");
 
     sections.forEach((section) => {
       gsap.fromTo(
@@ -41,7 +41,9 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <div className="mt-16">
         <Projects />
+      </div>
       <Skills />
       <Footer />
     </>
