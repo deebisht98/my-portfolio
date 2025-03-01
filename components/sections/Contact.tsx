@@ -29,30 +29,82 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Basic client-side validation
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: "Please fill in all required fields.",
+      });
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
     setFormStatus({
       submitted: true,
       success: false,
       message: "Sending message...",
     });
 
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://formspree.io/f/xlealyvw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json", //  Ensure correct content type
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData), // Convert data to JSON
+      });
+
+      if (response.ok) {
+        setFormStatus({
+          submitted: true,
+          success: true,
+          message: "Message sent successfully! I'll get back to you soon.",
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+
+        setTimeout(() => {
+          setFormStatus(null);
+        }, 5000);
+      } else {
+        const errorData = await response.json();
+        console.error("Form submission error:", errorData); // Log the error for debugging
+        setFormStatus({
+          submitted: true,
+          success: false,
+          message: `Failed to send message.  ${
+            errorData.error || "Please try again later."
+          }`,
+        });
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
       setFormStatus({
         submitted: true,
-        success: true,
-        message: "Message sent successfully! I'll get back to you soon.",
+        success: false,
+        message: "An unexpected error occurred. Please try again later.",
       });
-
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-
-      setTimeout(() => {
-        setFormStatus(null);
-      }, 5000);
-    }, 1500);
+    }
   };
 
   const container = {
@@ -238,7 +290,7 @@ export default function Contact() {
             <h2 className="text-2xl font-bold mb-6 text-white">
               Contact Information
             </h2>
-
+            ...{" "}
             <div className="space-y-4">
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center mr-4">
@@ -317,7 +369,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
             <div className="mt-8">
               <h3 className="font-medium text-gray-300 mb-4">Follow Me</h3>
               <SocialLinks />
@@ -417,36 +468,12 @@ export default function Contact() {
               transition={{ delay: 0.1 * index }}
               className="backdrop-blur-sm bg-black/30 rounded-xl p-6 shadow-lg border border-gray-800"
             >
-              <h3 className="text-xl font-semibold text-white mb-3">
+              <h3 className="text-xl font-semibold mb-3 text-gray-300">
                 {faq.question}
               </h3>
               <p className="text-gray-400">{faq.answer}</p>
             </motion.div>
           ))}
-        </div>
-      </motion.div>
-
-      {/* Call to Action */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
-        className="max-w-4xl mx-auto mb-20 px-4 text-center"
-      >
-        <div className="backdrop-blur-lg bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-xl p-8 md:p-12 shadow-lg border border-blue-800/30">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Ready to Transform Your Digital Presence?
-          </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let&apos;s collaborate to create something extraordinary that
-            captures attention and delivers results.
-          </p>
-          <a
-            href="#getInTouch"
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg text-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg shadow-blue-500/20 cursor-pointer"
-          >
-            Contact me
-          </a>
         </div>
       </motion.div>
     </div>

@@ -282,29 +282,29 @@ export const projects: Project[] = [
     title: "E-Commerce Platform",
     description:
       "A full-featured e-commerce platform with cart functionality, user authentication, and payment processing.",
-    image: "/images/project1.jpg",
+    image: "",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "https://github.com/deebisht98/project1",
-    liveUrl: "https://project1.yourdomain.com",
+    githubUrl: "",
+    liveUrl: "",
   },
   {
     id: 2,
     title: "AI Image Generator",
     description:
       "Web application that generates images using AI based on text prompts from users.",
-    image: "/images/project2.jpg",
+    image: "",
     tags: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/deebisht98/project2",
-    liveUrl: "https://project2.yourdomain.com",
+    githubUrl: "",
+    liveUrl: "",
   },
   {
     id: 3,
     title: "Real-time Chat Application",
     description:
       "A real-time messaging application with features like read receipts, typing indicators, and file sharing.",
-    image: "/images/project3.jpg",
+    image: "",
     tags: ["Socket.io", "Express", "React", "Firebase"],
-    githubUrl: "https://github.com/deebisht98/project3",
-    liveUrl: "https://project3.yourdomain.com",
+    githubUrl: "",
+    liveUrl: "",
   },
 ];

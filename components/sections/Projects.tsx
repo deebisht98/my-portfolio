@@ -75,13 +75,14 @@ function ProjectCard({ project }: { project: Project }) {
     >
       <Card className="relative h-full overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 transform transition-transform duration-300">
         <div className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-300" />
-        <Image
-          src={project.image}
-          alt={project.title}
-          layout="fill"
-          objectFit="cover"
-          className="opacity-30 group-hover:opacity-40 transition-opacity duration-300"
-        />
+        {project.image && (
+          <Image
+            src={project.image}
+            alt={project.title}
+            className="opacity-30 group-hover:opacity-40 transition-opacity duration-300 object-cover"
+            fill
+          />
+        )}
         <CardHeader className="relative z-10">
           <CardTitle className="text-2xl text-white transform-gpu">
             {project.title}
