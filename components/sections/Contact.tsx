@@ -311,7 +311,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-300">Email</h3>
-                  <p className="text-blue-400 mt-1">contact@example.com</p>
+                  <p className="text-blue-400 mt-1">deebisht98.dev@gmail.com</p>
                 </div>
               </div>
 
@@ -340,7 +340,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-300">Location</h3>
-                  <p className="text-gray-400 mt-1">San Francisco, CA</p>
+                  <p className="text-gray-400 mt-1">Noida, New Delhi</p>
                 </div>
               </div>
 
@@ -364,7 +364,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-medium text-gray-300">Working Hours</h3>
                   <p className="text-gray-400 mt-1">
-                    Monday - Friday, 9AM - 6PM PST
+                    Monday - Friday, 9AM - 6PM IST
                   </p>
                 </div>
               </div>
@@ -406,9 +406,9 @@ export default function Contact() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <p className="text-blue-400 font-medium">San Francisco, CA</p>
+                <p className="text-blue-400 font-medium">Noida, New Delhi</p>
                 <p className="text-gray-400 text-sm mt-2">
-                  Map integration would be available in production
+                  We Can&apos;t Wait to Welcome You
                 </p>
               </div>
 

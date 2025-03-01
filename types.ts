@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+
 export type socialLink = {
   name: string;
   icon: string;
@@ -43,3 +45,14 @@ export type Project = {
   githubUrl: string;
   liveUrl: string;
 };
+
+export type NavItem = {
+  name: string;
+  url: string;
+  icon: LucideIcon;
+}
+
+export type NavBarProps = {
+  items: NavItem[];
+  className?: string;
+}

@@ -81,6 +81,7 @@ function ProjectCard({ project }: { project: Project }) {
             alt={project.title}
             className="opacity-30 group-hover:opacity-40 transition-opacity duration-300 object-cover"
             fill
+            unoptimized
           />
         )}
         <CardHeader className="relative z-10">

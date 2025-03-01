@@ -4,6 +4,13 @@ import {
   SkillCategory,
   socialLink,
 } from "@/types";
+import {
+  Home,
+  User,
+  Briefcase,
+  FlaskConical,
+  BookOpenText,
+} from "lucide-react";
 
 export const userEmail = "deebisht98.dev@gmail.com";
 
@@ -308,3 +315,11 @@ export const projects: Project[] = [
     liveUrl: "",
   },
 ];
+
+ export const navItems = [
+   { name: "Home", url: "/", icon: Home },
+   { name: "Projects", url: "/projects", icon: FlaskConical },
+   { name: "Skills", url: "/skills", icon: BookOpenText },
+   { name: "Experiences", url: "/experiences", icon: Briefcase },
+   { name: "Contact", url: "/contact", icon: User },
+ ];

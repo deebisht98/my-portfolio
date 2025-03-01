@@ -3,20 +3,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
-
-interface NavItem {
-  name: string;
-  url: string;
-  icon: LucideIcon;
-}
-
-interface NavBarProps {
-  items: NavItem[];
-  className?: string;
-}
+import { NavBarProps } from "@/types";
 
 export function TubelightNavbar({ items, className }: NavBarProps) {
   const pathName = usePathname();

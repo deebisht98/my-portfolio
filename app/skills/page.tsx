@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function SkillsPage() {
   return (
-    <>
+    <div className="md:mt-20">
       <Skills />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -86,6 +86,6 @@ export default function SkillsPage() {
           ))}
         </div>
       </motion.div>
-    </>
+    </div>
   );
 }

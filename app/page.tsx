@@ -39,7 +39,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-y-24">
+    <div className="flex flex-col gap-y-30">
       <Hero />
       <Projects />
       <Skills />
