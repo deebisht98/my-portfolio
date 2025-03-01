@@ -1,7 +1,7 @@
 import Contact from "@/components/sections/Contact";
 
 const page = () => {
-  <div className="md:mt-20">
+  return <div className="md:mt-32">
     <Contact />
   </div>;
 };

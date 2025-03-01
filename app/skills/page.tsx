@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function SkillsPage() {
   return (
-    <div className="md:mt-20">
+    <div className="md:mt-32">
       <Skills />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -50,7 +50,11 @@ export default function SkillsPage() {
                         }%`,
                       }}
                       viewport={{ once: true, amount: 0.8 }}
-                      transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                      transition={{
+                        duration: 1.5,
+                        ease: "easeOut",
+                        delay: 0.2,
+                      }}
                       className={`h-full bg-gradient-to-r from-blue-400 to-purple-600 rounded-full`}
                     />
                   </div>

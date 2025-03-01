@@ -3,7 +3,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="container mx-auto px-4 md:mt-4">
+    <div className="container mx-auto px-4 md:mt-32">
       <Projects />
     </div>
   );

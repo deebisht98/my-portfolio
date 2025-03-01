@@ -259,7 +259,7 @@ export const projects: Project[] = [
     title: "Name It!",
     description:
       "Do you find it difficult to name your projects or ventures? Fear not! Check out this cool name suggestion application which will help you find the best name for your next project, venture, or startup. Keep building!",
-    image: "/images/nameit.png",
+    image: "./images/nameit.png",
     githubUrl: "https://github.com/deebisht98/react1",
     tags: ["React", "Node.js"],
     liveUrl: "https://deebisht98.github.io/react1/",
@@ -269,7 +269,7 @@ export const projects: Project[] = [
     title: "FlashType",
     description:
       "Having a good typing speed will always help you as a developer! Here, I present you the typing speed test application, where you can check your typing speed (in wpm) and share the results with your friends too.",
-    image: "/images/typedash.png",
+    image: "./images/typedash.png",
     githubUrl: "https://github.com/deebisht98/typedash",
     tags: ["React", "Node.js"],
     liveUrl: "https://deebisht98.github.io/typedash/",
@@ -279,7 +279,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     description:
       "As a developer/designer, you should definitely have your own portfolio website. There are endless benefits. But, a lot of people feel that it would be tough to make one. So here I bring you a tutorial to make your own website.",
-    image: "/images/portfolio.png",
+    image: "./images/portfolio.png",
     githubUrl: "https://github.com/deebisht98/myPortfolio",
     tags: ["React", "Node.js"],
     liveUrl: "https://deebisht98.github.io/myPortfolio/#/",
@@ -316,10 +316,10 @@ export const projects: Project[] = [
   },
 ];
 
- export const navItems = [
-   { name: "Home", url: "/", icon: Home },
-   { name: "Projects", url: "/projects", icon: FlaskConical },
-   { name: "Skills", url: "/skills", icon: BookOpenText },
-   { name: "Experiences", url: "/experiences", icon: Briefcase },
-   { name: "Contact", url: "/contact", icon: User },
- ];
+export const navItems = [
+  { name: "Home", url: "/", icon: Home },
+  { name: "Projects", url: "/projects", icon: FlaskConical },
+  { name: "Skills", url: "/skills", icon: BookOpenText },
+  { name: "Experiences", url: "/experiences", icon: Briefcase },
+  { name: "Contact", url: "/contact", icon: User },
+];

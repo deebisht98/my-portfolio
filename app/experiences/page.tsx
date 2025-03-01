@@ -2,7 +2,7 @@ import Experiences from "@/components/sections/Experiences";
 
 const page = () => {
   return (
-    <div className="md:mt-20">
+    <div className="md:mt-32">
       <Experiences />
     </div>
   );
