@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import SocialLinks from '../custom/SocialLinks';
+import SocialLinks from "../custom/SocialLinks";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -71,7 +71,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       <motion.div
         id="getInTouch"
         initial={{ opacity: 0, y: 20 }}

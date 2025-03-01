@@ -17,8 +17,6 @@ import { Github, ExternalLink } from "lucide-react";
 import { Project } from "@/types";
 import { projects } from "@/constants";
 
-
-
 function ProjectCard({ project }: { project: Project }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
@@ -79,7 +77,6 @@ function ProjectCard({ project }: { project: Project }) {
           className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-300"
           style={{ backgroundImage: `url(${project.image})` }}
         />
-
         <CardHeader className="relative z-10">
           <CardTitle className="text-2xl text-white transform-gpu">
             {project.title}
@@ -126,7 +123,7 @@ function ProjectCard({ project }: { project: Project }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects">
       <div className="backdrop-blur-lg bg-white/5 rounded-2xl p-8 md:p-12 shadow-xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

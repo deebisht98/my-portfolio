@@ -22,7 +22,7 @@ export default function Skills() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -79,8 +79,9 @@ export default function Skills() {
               <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: `${skill.proficiency}%` }}
-                  transition={{ duration: 1, ease: "easeOut" }}
+                  whileInView={{ width: `${skill.proficiency}%` }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
                   className="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"
                 />
               </div>

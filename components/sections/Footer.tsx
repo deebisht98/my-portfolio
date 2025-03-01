@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-20 pb-8">
+    <footer className="pb-8">
       {/* Wave Divider */}
       <div className="relative h-24 overflow-hidden">
         <svg

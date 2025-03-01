@@ -1,6 +1,12 @@
 "use client";
 
-import { Home, User, Briefcase, FlaskConical, BookOpenText } from "lucide-react";
+import {
+  Home,
+  User,
+  Briefcase,
+  FlaskConical,
+  BookOpenText,
+} from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -68,7 +74,7 @@ export default function MainLayout({
         />
 
         {/* Content sections with glass morphism */}
-        <div className="container mx-auto px-4 py-24">{children}</div>
+        <div className="container mx-auto px-4 pb-24 pt-20">{children}</div>
       </div>
     </div>
   );

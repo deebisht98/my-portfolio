@@ -39,13 +39,11 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col gap-y-24">
       <Hero />
-      <div className="mt-16">
-        <Projects />
-      </div>
+      <Projects />
       <Skills />
       <Footer />
-    </>
+    </div>
   );
 }

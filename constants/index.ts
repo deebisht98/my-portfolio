@@ -1,4 +1,9 @@
-import { ExperienceCategory, Project, SkillCategory, socialLink } from "@/types";
+import {
+  ExperienceCategory,
+  Project,
+  SkillCategory,
+  socialLink,
+} from "@/types";
 
 export const userEmail = "deebisht98.dev@gmail.com";
 
@@ -243,13 +248,43 @@ export const experienceCategories: ExperienceCategory[] = [
 
 export const projects: Project[] = [
   {
+    id: 4,
+    title: "Name It!",
+    description:
+      "Do you find it difficult to name your projects or ventures? Fear not! Check out this cool name suggestion application which will help you find the best name for your next project, venture, or startup. Keep building!",
+    image: "/images/nameit.png",
+    githubUrl: "https://github.com/deebisht98/react1",
+    tags: ["React", "Node.js"],
+    liveUrl: "https://deebisht98.github.io/react1/",
+  },
+  {
+    id: 5,
+    title: "FlashType",
+    description:
+      "Having a good typing speed will always help you as a developer! Here, I present you the typing speed test application, where you can check your typing speed (in wpm) and share the results with your friends too.",
+    image: "/images/typedash.png",
+    githubUrl: "https://github.com/deebisht98/typedash",
+    tags: ["React", "Node.js"],
+    liveUrl: "https://deebisht98.github.io/typedash/",
+  },
+  {
+    id: 6,
+    title: "Portfolio Website",
+    description:
+      "As a developer/designer, you should definitely have your own portfolio website. There are endless benefits. But, a lot of people feel that it would be tough to make one. So here I bring you a tutorial to make your own website.",
+    image: "/images/portfolio.png",
+    githubUrl: "https://github.com/deebisht98/myPortfolio",
+    tags: ["React", "Node.js"],
+    liveUrl: "https://deebisht98.github.io/myPortfolio/#/",
+  },
+  {
     id: 1,
     title: "E-Commerce Platform",
     description:
       "A full-featured e-commerce platform with cart functionality, user authentication, and payment processing.",
     image: "/images/project1.jpg",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "https://github.com/yourusername/project1",
+    githubUrl: "https://github.com/deebisht98/project1",
     liveUrl: "https://project1.yourdomain.com",
   },
   {
@@ -259,7 +294,7 @@ export const projects: Project[] = [
       "Web application that generates images using AI based on text prompts from users.",
     image: "/images/project2.jpg",
     tags: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/project2",
+    githubUrl: "https://github.com/deebisht98/project2",
     liveUrl: "https://project2.yourdomain.com",
   },
   {
@@ -269,7 +304,7 @@ export const projects: Project[] = [
       "A real-time messaging application with features like read receipts, typing indicators, and file sharing.",
     image: "/images/project3.jpg",
     tags: ["Socket.io", "Express", "React", "Firebase"],
-    githubUrl: "https://github.com/yourusername/project3",
+    githubUrl: "https://github.com/deebisht98/project3",
     liveUrl: "https://project3.yourdomain.com",
   },
 ];

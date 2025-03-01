@@ -3,8 +3,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { experienceCategories } from "@/constants";
 
-
-
 export default function Experiences() {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -24,7 +22,7 @@ export default function Experiences() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
