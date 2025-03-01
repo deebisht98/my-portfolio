@@ -16,6 +16,7 @@ import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink } from "lucide-react";
 import { Project } from "@/types";
 import { projects } from "@/constants";
+import Image from "next/image";
 
 function ProjectCard({ project }: { project: Project }) {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -73,15 +74,19 @@ function ProjectCard({ project }: { project: Project }) {
       className="group"
     >
       <Card className="relative h-full overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 transform transition-transform duration-300">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-300"
-          style={{ backgroundImage: `url(${project.image})` }}
+        <div className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-300" />
+        <Image
+          src={project.image}
+          alt={project.title}
+          layout="fill"
+          objectFit="cover"
+          className="opacity-30 group-hover:opacity-40 transition-opacity duration-300"
         />
         <CardHeader className="relative z-10">
           <CardTitle className="text-2xl text-white transform-gpu">
             {project.title}
           </CardTitle>
-          <CardDescription className="text-gray-300 transform-gpu">
+          <CardDescription className="text-gray-200 transform-gpu">
             {project.description}
           </CardDescription>
         </CardHeader>
