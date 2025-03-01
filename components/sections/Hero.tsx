@@ -46,7 +46,7 @@ export default function Hero() {
             ref={titleRef}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
           >
-            {" Dheeraj  Bisht"}
+            Dheeraj&nbsp;Bisht
           </h1>
 
           <motion.h2
